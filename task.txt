@@ -1,0 +1,172 @@
+🧩 AI TASK OVERVIEW
+
+You are an advanced AI design and code generation model.
+You are provided with:
+
+A Vue 3 + Vite frontend project (Composition API)
+
+A FastAPI backend folder
+
+TailwindCSS configuration (already set up)
+
+DO NOT create new files or rename existing ones.
+Instead, fill in the existing Vue components with complete structure, design, and logic, matching the visual reference image provided.
+Frontend and backend must be filled simultaneously so that both sides work seamlessly together.
+
+🎯 GOAL
+
+Design and generate a fully responsive dark chess-themed UI for a digital goods marketplace named PayPawn.
+Use the provided Vue structure only.
+All updates should visually correspond to the provided homepage reference image.
+
+🎨 THEME & AESTHETIC
+
+Global Style:
+
+Dark chessboard aesthetic with alternating tile tones.
+
+Background colors:
+
+Black tile: #0d0d0d
+
+Dark gray tile: #1e1e1e
+
+Border gray: #2c2c2c
+
+Primary accent colors:
+
+Ivory White: #f8f8f8
+
+Gold: #d4af37
+
+Silver: #c0c0c0
+
+Chess Red: #ff3b30 (for alerts)
+
+Typography:
+Use Rubik, Inter, or IBM Plex Sans with bold headings and light body text.
+
+Interactive Effects:
+
+Hover: gold glow + slight elevation.
+
+Focus: white glow outline.
+
+Transition: 300–500ms smooth ease.
+
+🧩 COMPONENT-SPECIFIC INSTRUCTIONS
+1. NavBar.vue
+
+Background: solid black tile.
+
+Left section: minimalistic pawn or knight logo.
+
+Center: search bar (frosted glass look, glowing blue when focused).
+
+Right section: 3 round icon buttons (Games, Marketplace, Analytics).
+
+Hover: white/gold glow with subtle shadow.
+
+2. HeroCarousel.vue
+
+Background gradient: dark gray → black.
+
+Display 9 featured items (3x3 layout, horizontally scrollable).
+
+Navigation arrows: glowing gold triangles.
+
+Card design:
+
+Alternating gray background tiles.
+
+Title: white bold.
+
+Price: gold.
+
+Hover: card lifts slightly, reveals “View” or “Buy” button.
+
+3. ProductGrid.vue
+
+Layout: responsive 5-column (desktop), 2-column (mobile).
+
+Cards:
+
+Chessboard-style alternation.
+
+Hover: zoom in slightly, gold border, drop shadow.
+
+Add button: silver with blue glow (top-right, absolute position).
+
+4. Footer.vue
+
+Three-column layout:
+
+Left: social icons (Discord, Telegram, X/Twitter, YouTube)
+
+Center: newsletter form
+
+Right: support / contact / terms
+
+Bottom bar:
+
+Text: silver on black background.
+
+Border-top: subtle chess pattern.
+
+5. App.vue
+
+Global dark matte layout wrapper.
+
+Smooth fade-in animation on load (using @formkit/auto-animate).
+
+⚙️ BACKEND INTEGRATION (FASTAPI)
+
+Connect frontend dynamically to these endpoints:
+
+GET /products → all digital goods
+
+GET /featured → featured items for the hero carousel
+
+POST /search?q= → search products
+
+POST /purchase → purchase item
+
+GET /user → current user info
+
+Use axios for requests, bind results with Vue (v-for, v-model, v-bind, etc.).
+
+🧠 DEVELOPMENT RULES
+
+No new files or directories.
+
+All updates must go inside existing .vue files.
+
+Keep consistent naming and code structure.
+
+Accessibility and responsiveness required.
+
+Code, text, and comments must be in English only.
+
+✅ OUTPUT REQUIREMENTS
+
+Return updated code for each .vue component inside /src, including:
+
+<template> section with complete layout.
+
+<script setup> block with Composition API and axios logic.
+
+Tailwind classes for layout & effects.
+
+Scoped <style> if needed for minor adjustments.
+
+🧩 FOUND INCONSISTENCIES & FIXES
+❌ Issue	🔧 Fix
+Prompts mixed between design and task logic, causing confusion for AI.	Split structure into clear “Theme / Components / Backend / Output” sections.
+Didn’t specify that frontend and backend work must match the visual reference.	Added instruction to “visually correspond to provided homepage reference.”
+Unclear card layout in HeroCarousel (said both “scrollable” and “3x3 grid”).	Clarified: “3x3 layout horizontally scrollable.”
+No instruction to keep footer minimal on mobile.	Added implicit responsiveness requirement.
+Mentioned multiple glow colors inconsistently (white/gold/blue).	Standardized hover/focus scheme.
+Missing guidance about social icons layout.	Defined layout for left/center/right footer areas.
+No mention of connection between axios data and v-for rendering.	Added explicit instruction on data binding logic.
+No explicit mention to avoid new files (possible AI confusion).	Repeated rule for “no new files or folders.”
+Inconsistent transition/elevation style between sections.	Standardized to gold glow + 300–500ms transition globally.
